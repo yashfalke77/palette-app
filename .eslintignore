@@ -1,0 +1,9 @@
+# removing tailwind config file 
+tailwind.config.js
+postcss.config.js
+
+# removing next config file
+next.config.js
+
+# removing node_modules
+node_modules

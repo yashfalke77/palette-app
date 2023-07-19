@@ -1,0 +1,75 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "next/core-web-vitals",
+        "plugin:unicorn/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "unicorn/prevent-abbreviations": "off",
+        "@typescript-eslint/strict-boolean-expressions": 0,
+        "@typescript-eslint/triple-slash-reference": 0,
+        "no-console": "error",
+        "func-names": "off",
+        "no-underscore-dangle": "off",
+        "consistent-return": "off",
+        "jest/expect-expect": "off",
+        "security/detect-object-injection": "off",
+        "indent": [
+            "error",
+            2
+        ],
+        "semi": "error",
+        "lines-between-class-members": [
+            "error",
+            "always"
+        ],
+        "complexity": [
+            2,
+            10
+        ],
+        "max-depth": [
+            "error",
+            4
+        ],
+        "max-len": "off",
+        "space-before-function-paren": "off",
+        "linebreak-style": "off",
+        "key-spacing": [
+            "error",
+            {
+                "beforeColon": false
+            }
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                "before": true
+            }
+        ],
+        "brace-style": "error",
+        "no-trailing-spaces": "error",
+        "no-debugger": "warn",
+        "max-nested-callbacks": [
+            2,
+            3
+        ],
+        "radix": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ]
+    }
+}

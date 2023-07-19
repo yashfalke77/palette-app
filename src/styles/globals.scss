@@ -1,0 +1,32 @@
+// importing fonts
+@import url('/public/fonts/Gilroy-Bold/style.scss');
+@import url('/public/fonts/Gilroy-Semibold/style.scss');
+@import url('/public/fonts/Gilroy-Medium/style.scss');
+@import url('/public/fonts/Gilroy-Regular/style.scss');
+
+// importing tailwind config
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// importing variables
+@import 'variables.scss';
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  overflow-x: hidden;
+}
