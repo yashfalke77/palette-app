@@ -19,6 +19,7 @@
     ],
     "rules": {
         "unicorn/prevent-abbreviations": "off",
+        "unicorn/filename-case": "off",
         "@typescript-eslint/strict-boolean-expressions": 0,
         "@typescript-eslint/triple-slash-reference": 0,
         "no-console": "error",

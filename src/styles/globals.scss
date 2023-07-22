@@ -1,9 +1,3 @@
-// importing fonts
-@import url('/public/fonts/Gilroy-Bold/style.scss');
-@import url('/public/fonts/Gilroy-Semibold/style.scss');
-@import url('/public/fonts/Gilroy-Medium/style.scss');
-@import url('/public/fonts/Gilroy-Regular/style.scss');
-
 // importing tailwind config
 @tailwind base;
 @tailwind components;
@@ -11,6 +5,9 @@
 
 // importing variables
 @import 'variables.scss';
+
+// importing mixins
+@import 'mixins.scss';
 
 *,
 *:after,
@@ -21,8 +18,24 @@
   box-sizing: inherit;
 }
 
+html {
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+      font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(tab-port) {
+      font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+      font-size: 75%; // 1rem = 12px
+  }
+}
+
 body {
-  font-family: 'Gilroy', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   box-sizing: border-box;

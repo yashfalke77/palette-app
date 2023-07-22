@@ -1,0 +1,165 @@
+@keyframes explore {
+    0% {
+        opacity: 0;
+        transform-origin: top right;
+        transform: scale(0);
+    }
+
+    80% {
+        transform-origin: top right;
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: top right;
+        scale: (1);
+    }
+
+}
+
+.nav {
+    @apply flex justify-between sticky top-0 h-24 z-50 px-8;
+    box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
+
+    &__left {
+        @apply flex items-center flex-grow-0 flex-shrink-0 h-full basis-1/4;
+    }
+
+    &__logo {
+        @apply font-bold text-2xl;
+    }
+
+    &__right {
+        @apply flex items-center flex-1 justify-end;
+    }
+
+    &__info,
+    &__auth {
+        @apply px-8;
+
+        .nav__link:not(:last-child) {
+            @apply mr-8;
+        }
+    }
+
+    &__info {
+        @apply flex;
+    }
+
+    &__btnRound {
+        @apply font-medium py-3.5 px-5 rounded-xl text-white bg-primary-200 hover:bg-primary-400 focus:bg-primary-600;
+        font-size: 1.45rem;
+    }
+
+    &__divider {
+        @apply h-2/3 w-0.5 relative top-0 bg-black bg-opacity-10 block;
+    }
+
+    &__link {
+        @apply inline-flex items-center h-24 font-medium text-base transition-all duration-75 ease-in-out hover:text-primary-200;
+    }
+}
+
+.tools {
+
+    @apply relative;
+
+    &__menu {
+        @apply h-24 font-medium text-base mr-8 transition-all duration-75 ease-in-out hover:text-primary-200;
+    }
+
+    &__options {
+        @apply flex bg-white w-[67rem] justify-between absolute top-[5.5rem] right-4 rounded-xl;
+        box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px, rgba(0, 0, 0, 0.12) 0 15px 30px 0px;
+        animation: explore 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+
+
+        &::after {
+            top: -6px;
+            background: #f7f7f8;
+        }
+
+        &::after {
+            border-bottom: 1px solid rgb(223, 212, 212);
+            border-right: 1px solid rgb(223, 212, 212);
+            border-radius: 0 0 4px 0;
+            margin-left: -5px;
+            right: 2rem;
+            transform: rotate(-135deg);
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+        }
+
+        &Left {
+            @apply p-8 flex-grow-0 flex-shrink-0 h-full basis-2/3;
+        }
+
+        &Right {
+            @apply p-8 flex-1 bg-[#f7f7f8];
+        }
+    }
+
+    &__mainOpt {
+
+        &Link {
+            @apply flex  items-center mb-[1rem] px-[2rem] py-[1.5rem] transition-all duration-100 ease-in-out;
+
+            &__1{
+                @apply hover:bg-[#FEF9E6] rounded-2xl;
+            }
+
+            &__2{
+                @apply hover:bg-[#E9FCF6] rounded-xl;
+            }
+
+            &__3{
+                @apply hover:bg-[#f7f0fe] rounded-xl;
+            }
+
+            &__4{
+                @apply hover:bg-[#F2F7FF] rounded-xl;
+            }
+        }
+
+        &Text{
+            @apply inline-block ml-8 font-bold text-[2.2rem] -mb-5 tracking-tight transition-all duration-100 ease-in-out;
+
+            .tools__mainOptLink__1:hover &__1{
+                @apply text-[#DAAB00];
+            }
+
+            .tools__mainOptLink__2:hover &__2{
+                @apply text-[#119C75];
+            }
+
+            .tools__mainOptLink__3:hover &__3{
+                @apply text-[#802FDE];
+            }
+
+            .tools__mainOptLink__4:hover &__4{
+                @apply text-[#0067FB];
+            }
+        }
+
+        &Desc{
+            @apply inline-block ml-8 text-[1.4rem] font-medium text-[#7d7c83];
+        }
+    }
+
+    &__otherOpt{
+
+        &Item{
+            @apply mb-2;
+        }
+        &Link{
+            @apply text-[1.55rem] font-medium transition-all duration-75 ease-in-out hover:text-primary-200;
+        }
+
+        &Heading{
+            @apply font-semibold mt-6 mb-2;
+        }
+    }
+}
