@@ -39,6 +39,9 @@ module.exports = {
         'max-md': { 'max': '960px' },
         'max-sm': { 'max': '600px' },
       },
+      backgroundImage: {
+        'home': "url('../../../public/Images/home.png')",
+      }
     },
   },
   plugins: [],

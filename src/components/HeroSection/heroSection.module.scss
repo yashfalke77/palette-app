@@ -1,0 +1,45 @@
+.hero{
+
+    @apply flex pr-[4.2rem] h-[75rem];
+    max-width: 1500px !important;
+    width: auto !important;
+
+    &__left{
+        @apply flex flex-col justify-center items-center text-center flex-grow-0 flex-shrink-0 h-full basis-[41%] px-8;
+    }
+
+    &__right{
+        @apply flex-1 bg-home bg-cover bg-center;
+    }
+
+    &__headingPrimary{
+        @apply font-black text-[7rem] leading-[1.1em] tracking-tighter mb-[3rem];
+    }
+
+    &__description{
+        @apply text-[#464853] leading-[1.4em] mb-[3.5rem] text-[1.8rem];
+    }
+
+    &__buttons{
+        @apply w-[26rem] inline-block;
+    }
+
+    &__btnRound{
+        @apply mb-[1.4rem] py-[1rem] font-medium text-white rounded-[1rem] text-base bg-primary-200 block transition-all duration-75 ease-in-out;
+        box-shadow: rgba(255, 255, 255, 0) 0 0 0 3px, rgba(0, 102, 255, 0) 0 0 0 4px;
+
+        &:hover{
+            @apply bg-primary-400;
+        }
+    }
+
+    &__btnOutline{
+        @apply mb-[1.4rem] py-[1rem] font-medium bg-white rounded-[1rem] text-base block transition-all duration-75 ease-in-out;
+        box-shadow: inset #d8d8da 0 0 0 1px;
+
+        &:hover{
+            @apply bg-[#f7f7f8];
+            box-shadow: inset #b1b0b5 0 0 0 1px;
+        }
+    }
+}

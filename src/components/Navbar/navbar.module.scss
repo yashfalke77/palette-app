@@ -19,7 +19,7 @@
 }
 
 .nav {
-    @apply flex justify-between sticky top-0 h-24 z-50 px-8;
+    @apply flex justify-between sticky top-0 h-24 z-50 px-8 bg-white;
     box-shadow: rgba(0, 0, 0, 0.075) 0 1px;
 
     &__left {
