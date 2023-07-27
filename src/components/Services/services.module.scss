@@ -1,0 +1,139 @@
+@keyframes moveInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    80% {
+        transform: translateY(0rem);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.services{
+    @apply min-h-[67rem] px-[3rem] py-[9rem];
+
+    &__head{
+        @apply max-w-[70rem] mx-auto text-center mb-[8rem];
+    }
+
+    &__headingPrimary{
+        @apply font-black text-[4.8rem] leading-[1.1em] tracking-tighter mb-[1rem];
+    }
+
+    &__description{
+        @apply text-[#464853] leading-[1.4em] text-[1.8rem];
+    }
+
+    &__body{
+        @apply grid gap-[3rem];
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    &__headingSecondary{
+        @apply font-extrabold text-[3rem] leading-[1.1em];
+    }
+
+    &__headingTertiary{
+        @apply font-extrabold text-[2.4rem] leading-[1.1em];
+    }
+
+    &__card{
+        @apply flex flex-col justify-center items-center text-center bg-[#f7f7f8] rounded-[14px] w-full h-[30rem] cursor-pointer mr-[1.6rem] mb-[3rem];
+
+        &Outer{
+            @apply flex flex-col justify-center items-center relative p-[3rem] w-full;
+        }
+
+        &Badge{
+            @apply text-sm absolute font-bold px-[0.5rem] rounded-md top-0 right-12 uppercase;
+
+            &--1 {
+                @apply text-[#daab00] bg-[#fdf3ce];
+            }
+
+            &--2 {
+                @apply text-[#802fde] bg-[#e8e2f7];
+            }
+
+            &--3 {
+                @apply text-[#14b789] bg-[#d5f8ef];
+            }
+
+            &--4 {
+                @apply text-[#e71591] bg-[#ffe5f4];
+            }
+
+            &--5 {
+                @apply text-[#00aee5] bg-[#d8f6ff];
+            }
+        }
+
+        &Inner{
+            @apply hidden w-0 p-[3rem];
+        }
+
+        &Icon{
+            @apply fill-black w-[5.5rem] h-[4.5rem] mb-[1.6rem];
+        }
+
+        &Description {
+            @apply text-[#464853] mt-[1.6rem] text-base leading-[1.7em];
+        }
+
+        &:hover &Inner{
+            @apply inline-block w-full;
+            animation-name: moveInTop;
+            animation-duration: 0.5s;
+        }
+
+        &:hover &Outer{
+            @apply hidden w-0;
+        }
+
+        &--1:hover {
+            background-color: #fdf3ce;
+        }
+
+        &--2:hover {
+            background-color: #e8e2f7;
+        }
+
+        &--3:hover {
+            background-color: #d5f8ef;
+        }
+
+        &--4:hover {
+            background-color: #ffe5f4;
+        }
+
+        &--5:hover {
+            background-color: #d8f6ff;
+        }
+
+        &Hover {
+            &--1 {
+                @apply text-[#daab00];
+            }
+
+            &--2 {
+                @apply text-[#802fde];
+            }
+
+            &--3 {
+                @apply text-[#14b789];
+            }
+
+            &--4 {
+                @apply text-[#e71591];
+            }
+
+            &--5 {
+                @apply text-[#00aee5];
+            }
+        }
+    }
+}
