@@ -92,9 +92,14 @@ const Navbar = () => {
                 <ul>
                   <li className={styles.tools__otherOptItem}>
                     <Link href='/' className={styles.tools__otherOptLink}>Chrome Extension</Link>
+                    <span className={`${styles.tools__cardBadge} ${styles["tools__cardBadge--1"]}`}>soon</span>
                   </li>
                   <li className={styles.tools__otherOptItem}>
                     <Link href='/' className={styles.tools__otherOptLink}>Linkedin Page</Link>
+                  </li>
+                  <li className={styles.tools__otherOptItem}>
+                    <Link href='/' className={styles.tools__otherOptLink}>Android App</Link>
+                    <span className={`${styles.tools__cardBadge} ${styles["tools__cardBadge--2"]}`}>soon</span>
                   </li>
                   <li className={styles.tools__otherOptItem}>
                     <Link href='/' className={styles.tools__otherOptLink}>Instagram Page</Link>
