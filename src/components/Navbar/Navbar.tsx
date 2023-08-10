@@ -118,7 +118,7 @@ const Navbar = () => {
 
         <div className={styles.nav__auth}>
           <Link className={styles.nav__link} href='/signin'>Sign In</Link>
-          <Link className={styles.nav__btnRound} href='/signup'>Join us</Link>
+          <Link className={styles.nav__btnRound} href='/sign_up'>Join us</Link>
         </div>
       </div>
     </nav>

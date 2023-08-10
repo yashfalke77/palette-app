@@ -1,0 +1,23 @@
+.signUp{
+    @apply flex h-screen;
+
+    &__sidebarContent{
+        @apply flex-grow-0 flex-shrink-0 h-full basis-1/4 bg-[#f2d184] relative;
+    }
+
+    &__video{
+        @apply w-full h-full object-cover;
+    }
+
+    &__logo{
+        @apply absolute top-0 left-0 mt-8 ml-8 font-medium text-[2.5rem] text-white z-10;
+    }
+
+    &__desc{
+        @apply absolute bottom-0 left-0 mb-8 ml-8 font-medium text-[1.4rem] text-white;
+    }
+
+    &__mainContainer{
+        @apply flex flex-1 justify-start items-center;
+    }
+}
