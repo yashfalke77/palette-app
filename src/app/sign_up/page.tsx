@@ -18,7 +18,7 @@ const Page = () => {
       </section>
 
       <section className={styles.signUp__mainContainer}>
-        {options ? (<SignUpOptions options={options} setOptions={setOptions} />) : (<EmailSignUp />)}
+        {options ? (<SignUpOptions options={options} setOptions={setOptions} />) : (<EmailSignUp options={options} setOptions={setOptions} />)}
       </section>
     </main>
   );

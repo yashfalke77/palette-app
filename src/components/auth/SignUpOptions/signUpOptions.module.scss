@@ -8,11 +8,11 @@
     }
 
     &__icon {
-        @apply w-[1.6rem] h-[1.6rem] mr-[1rem] fill-white;
+        @apply w-[1.6rem] h-[1.6rem] mr-[1rem] fill-black;
     }
 
-    &__google {
-        @apply flex items-center justify-center w-full bg-primary-200 py-[1.6rem] text-[1.6rem] text-white rounded-2xl hover:bg-primary-400 focus:bg-primary-600;
+    &__email {
+        @apply block w-full bg-primary-200 py-[1.6rem] text-[1.6rem] text-white rounded-2xl transition-all duration-75 ease-in-out hover:bg-primary-400 focus:bg-primary-600 mb-[4rem];
     }
 
     &__divider {
@@ -24,8 +24,8 @@
         }
     }
 
-    &__email {
-        @apply w-full bg-white rounded-2xl py-[1.6rem] text-[1.6rem] block transition-all duration-75 ease-in-out mb-[4rem];
+    &__google {
+        @apply flex items-center justify-center w-full bg-white rounded-2xl py-[1.6rem] text-[1.6rem] transition-all duration-75 ease-in-out;
         box-shadow: inset #d8d8da 0 0 0 1px;
 
         &:hover{
@@ -38,7 +38,7 @@
         @apply text-[1.2rem] font-normal leading-[1.4rem] text-center text-[#7d7c83];
 
         &Link {
-            @apply text-black transition-all duration-75 ease-in-out hover:text-primary-200;
+            @apply text-black transition-all duration-75 ease-in-out hover:text-primary-200 hover:underline;
         }
     }
 

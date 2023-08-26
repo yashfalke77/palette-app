@@ -1,0 +1,72 @@
+.signUp {
+
+    &__authForm {
+        @apply flex flex-col relative justify-center max-w-[50rem] w-full h-full pl-[6rem] pt-[3rem] ml-[10rem];
+    }
+
+    &__back {
+        @apply absolute top-[4rem] left-[-4rem] rounded-[8px] border border-solid border-[#e7e7e9] p-[0.8rem];
+
+        &:hover {
+            @apply bg-[#f7f7f8] border-[#d8d8da] transition-all duration-75 ease-in-out;
+        }
+    }
+
+    &__icon {
+        @apply w-[2rem] h-[2rem] fill-black;
+    }
+
+    &__headingSecondary{
+        @apply font-extrabold text-[3rem] leading-[1.1em] tracking-tighter mb-[4rem];
+    }
+
+    &__field {
+        @apply flex flex-col;
+    }
+
+    &__label {
+        @apply text-[1.6rem] font-medium mb-[0.5rem];
+    }
+
+    &__input {
+        @apply py-[1.2rem] px-[2rem] text-inherit text-[1.4rem] font-normal rounded-[5px] outline-none mb-[2rem] transition-all duration-75 ease-in-out;
+        font-family: inherit;
+        box-shadow: inset #d8d8da 0 0 0 1px, inset white 0 0 0 100px !important;
+
+        &:hover {
+            box-shadow: inset #b1b0b5 0 0 0 1px, inset white 0 0 0 100px !important;
+        }
+
+        &:focus {
+            box-shadow: inset #0066ff 0 0 0 1px, inset white 0 0 0 100px !important;
+        }
+    }
+
+    &__disclaimer {
+        @apply text-[1.2rem] font-normal leading-[1.4rem] text-center text-[#7d7c83];
+
+        &:first-of-type {
+            @apply mb-[0.5rem];
+        }
+
+        &Link {
+            @apply text-black transition-all duration-75 ease-in-out hover:text-primary-200 hover:underline;
+        }
+    }
+
+    &__button {
+        @apply block w-full bg-primary-200 py-[1.6rem] text-[1.6rem] text-white rounded-2xl transition-all duration-75 ease-in-out hover:bg-primary-400 focus:bg-primary-600 my-[2.5rem];
+    }
+
+    &__signIn{
+        @apply mt-[2rem] text-[1.4rem] text-center text-[#7d7c83];
+
+        &Link {
+            @apply text-primary-200 transition-all duration-75 ease-in-out;
+
+            &:hover {
+                @apply underline;
+            }
+        }
+    }
+}

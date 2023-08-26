@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './signUpOptions.module.scss';
+import Link from 'next/link';
 
 interface SignUpOptionsProps {
   options: boolean;
@@ -23,7 +24,7 @@ const SignUpOptions = ({setOptions}: SignUpOptionsProps) => {
              and our default <a href='/' className={styles.signUp__disclaimerLink}>Notification Settings</a>.
       </p>
       <p className={styles.signUp__signIn}>
-            Already have an account? <a href='/' className={styles.signUp__signInLink}>Sign In</a>
+            Already have an account? <Link href='/sign_in' className={styles.signUp__signInLink}>Sign In</Link>
       </p>
     </div>
   );
