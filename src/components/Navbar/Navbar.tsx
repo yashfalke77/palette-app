@@ -37,7 +37,7 @@ const Navbar = () => {
               <div className={styles.tools__optionsLeft}>
                 <ul className={styles.tools__mainOptList}>
                   <li>
-                    <Link className={`${styles.tools__mainOptLink} ${styles.tools__mainOptLink__1}`} href='/'>
+                    <Link className={`${styles.tools__mainOptLink} ${styles.tools__mainOptLink__1}`} href='/palettes'>
                       <Image src={exploreIcon} width={55} height={55} quality={100} alt='explore palettes' />
                       <div>
                         <span className={`${styles.tools__mainOptText} ${styles.tools__mainOptText__1}`}>Explore Palettes</span>

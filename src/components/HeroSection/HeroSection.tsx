@@ -15,7 +15,7 @@ const HeroSection = () => {
         </p>
         <div className={styles.hero__buttons}>
           <Link href='/' className={styles.hero__btnRound}>Start the generator</Link>
-          <Link href='/' className={styles.hero__btnOutline}>Explore trending palettes</Link>
+          <Link href='/palettes' className={styles.hero__btnOutline}>Explore trending palettes</Link>
         </div>
       </div>
     </section>

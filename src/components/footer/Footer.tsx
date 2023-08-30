@@ -13,7 +13,7 @@ const Footer = () => {
               <Link href='/' className={styles.footer__link}>Generate Your Palettes</Link>
             </li>
             <li className={styles.footer__item} >
-              <Link href='/' className={styles.footer__link}>Explore Plaettes</Link>
+              <Link href='/palettes' className={styles.footer__link}>Explore Plaettes</Link>
             </li>
             <li className={styles.footer__item} >
               <Link href='/' className={styles.footer__link}>Random Palette Generator</Link>
