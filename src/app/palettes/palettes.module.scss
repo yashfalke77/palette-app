@@ -1,0 +1,22 @@
+.palettes {
+    @apply py-[10rem] px-[2rem];
+
+    &__title {
+        @apply mb-[10rem] text-center;
+    }
+
+    &__headingPrimary {
+        @apply font-black text-[5rem] leading-[1.1em] tracking-tighter mb-[3rem];
+    }
+
+    &__description{
+        @apply text-[#7d7c83] leading-[1.7em] mb-[3.5rem] text-[1.8rem] max-w-[40rem] mx-auto;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+        grid-gap: 20px 35px;
+        padding: 4rem;
+    }
+}

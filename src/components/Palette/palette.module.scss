@@ -1,0 +1,34 @@
+.palette {
+    @apply relative;
+
+    &__colors {
+        @apply flex rounded-[10px];
+    }
+
+    &__description {
+        @apply flex items-center justify-end m-[0.4rem] cursor-pointer;
+    }
+
+    &__like {
+        @apply flex items-center;
+    }
+
+    &__text {
+        @apply text-[#6c757d] text-[1.3rem] font-medium transition-all duration-200 ease-in-out;
+
+        &:hover {
+            @apply text-black;
+        }
+    }
+
+    &__icon {
+
+        &Heart {
+            @apply h-[1.6rem] w-[1.6rem] fill-[#6c757d] mr-[0.6rem] transition-all duration-200 ease-in-out;
+
+            &:hover {
+                @apply fill-black;
+            }
+        }
+    }
+}
