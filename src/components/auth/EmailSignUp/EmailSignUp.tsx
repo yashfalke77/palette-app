@@ -15,7 +15,7 @@ const EmailSignUp = ({setOptions}: SignUpOptionsProps) => {
           <use href='/icons/symbol-defs.svg#icon-chevron-left'></use>
         </svg>
       </button>
-      <h2 className={styles.signUp__headingSecondary}>Sign up to Palettee</h2>
+      <h2 className={styles.signUp__headingSecondary}>Sign up to Colors</h2>
       <form className={styles.signUp__form}>
         <div className={styles.signUp__field}>
           <label className={styles.signUp__label} htmlFor='name'>Name</label>

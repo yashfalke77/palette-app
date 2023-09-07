@@ -11,7 +11,7 @@ const Page = () => {
     <main className={styles.signUp}>
 
       <section className={styles.signUp__sidebarContent}>
-        <Link href='/' className={styles.signUp__logo} >Palettee</Link>
+        <Link href='/' className={styles.signUp__logo} >Colors</Link>
         <video playsInline={true} className={styles.signUp__video} autoPlay={true} loop={true} muted={true} src='https://cdn.dribbble.com/uploads/48292/original/30fd1f7b63806eff4db0d4276eb1ac45.mp4?1689187515'>
         </video>
         <span className={styles.signUp__desc}>Creation Starts Here</span>

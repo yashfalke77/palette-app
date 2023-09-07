@@ -7,6 +7,7 @@ import exploreIcon from '../../../public/Icons/explore-palette.png';
 import paletteGeneratorIcon from '../../../public/Icons/generate.svg';
 import randomGeneratorIcon from '../../../public/Icons/charging-battery.png';
 import contributorIcon from '../../../public/Icons/charity.png';
+import logo from '../../../public/Images/logo.png';
 
 const Navbar = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -26,7 +27,9 @@ const Navbar = () => {
   return (
     <nav className={styles.nav}>
       <div className={styles.nav__left}>
-        <Link className={styles.nav__logo} href='/'>Palettee</Link>
+        <Link className={styles.nav__logo} href='/'>
+          <Image src={logo} width={140} alt='logo' />
+        </Link>
       </div>
 
       <div className={styles.nav__right}>
@@ -83,7 +86,7 @@ const Navbar = () => {
                     <Link href='/' className={styles.tools__otherOptLink}>Color Picker</Link>
                   </li>
                   <li className={styles.tools__otherOptItem}>
-                    <Link href='/' className={styles.tools__otherOptLink}>Contact Us</Link>
+                    <Link href='/contact' className={styles.tools__otherOptLink}>Contact Us</Link>
                   </li>
                 </ul>
                 <h4 className={styles.tools__otherOptHeading}>
@@ -111,7 +114,7 @@ const Navbar = () => {
               </div>
             </section>)}
           </div>
-          <Link className={styles.nav__link} href='/about'>About</Link>
+          <Link className={styles.nav__link} href='/contact'>Contact</Link>
         </div>
 
         <span className={styles.nav__divider}></span>

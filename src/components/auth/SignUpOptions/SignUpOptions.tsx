@@ -10,7 +10,7 @@ interface SignUpOptionsProps {
 const SignUpOptions = ({setOptions}: SignUpOptionsProps) => {
   return (
     <div className={styles.signUp__authContent}>
-      <h2 className={styles.signUp__headingSecondary}>Sign up to Palettee</h2>
+      <h2 className={styles.signUp__headingSecondary}>Sign up to Colors</h2>
       <a href='/' className={styles.signUp__google}>
         <svg className={styles.signUp__icon}>
           <use href='/icons/symbol-defs.svg#icon-google'></use>
