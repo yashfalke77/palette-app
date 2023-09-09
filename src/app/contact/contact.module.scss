@@ -1,0 +1,37 @@
+.contact {
+
+    @apply flex flex-col justify-center items-center py-[10rem];
+    min-height: calc(100% - 607px - 60px);
+
+    &__heading {
+        @apply flex flex-col items-center px-[4.2rem] mb-[10rem];
+    }
+
+    &__headingPrimary{
+        @apply font-black text-[4.8rem] leading-[1.1em] tracking-tighter mb-[3rem];
+    }
+
+    &__desc {
+        @apply text-[#464853] leading-[1.4em] text-[1.8rem];
+    }
+
+    &__body {
+        @apply flex flex-wrap px-[4.2rem] w-[100rem];
+    }
+
+    &__item {
+        @apply flex-grow p-[3.6rem] basis-[40rem] text-left;
+
+        &Label {
+            @apply text-[1.5rem] uppercase font-semibold text-[#FF0096];
+        }
+
+        &Big {
+            @apply text-[3.1rem] py-[1.7rem] leading-[1.3em] font-semibold;
+        }
+
+        &P {
+            @apply text-[1.6rem] text-[#7d7c83] leading-[1.7em];
+        }
+    }
+}
