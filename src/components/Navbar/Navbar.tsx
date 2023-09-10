@@ -49,7 +49,7 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link className={`${styles.tools__mainOptLink} ${styles.tools__mainOptLink__2}`} href='/'>
+                    <Link className={`${styles.tools__mainOptLink} ${styles.tools__mainOptLink__2}`} href='/new'>
                       <Image src={paletteGeneratorIcon} width={55} height={55} alt='generate palettes' />
                       <div>
                         <span className={`${styles.tools__mainOptText} ${styles.tools__mainOptText__2}`}>Generate Palettes</span>
