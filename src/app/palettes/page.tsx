@@ -3,10 +3,25 @@ import Search from '@/components/Search/Search';
 import React from 'react';
 import styles from './palettes.module.scss';
 import Palette from '@/components/Palette/Palette';
-import seedPalettes from '@/utils/seedPalettes';
+// import seedPalettes from '@/utils/seedPalettes';
 import { Toaster } from 'react-hot-toast';
+import supabaseServer from '@/utils/supabase';
+import { Database } from '@/models/supabase';
 
-const page = () => {
+const getPalettes = async () => {
+  return await supabaseServer.from('palettes').select('*, colors(*)')
+    .returns<(Database['public']['Tables']['palettes']['Row'] & {
+      colors: Database['public']['Tables']['colors']['Row'][]
+    })[]>();
+};
+
+export const revalidate = 60;
+
+
+const page = async () => {
+
+  const {data, error} = await getPalettes();
+
   return (
     <div>
       <Navbar />
@@ -18,19 +33,11 @@ const page = () => {
               Get inspired by thousands of beautiful color schemes and make something cool!
           </p>
         </div>
+        {error && <p>{error.message}</p>}
         <div className={styles.palettes__list}>
-          <Palette {...seedPalettes[4]} />
-          <Palette {...seedPalettes[0]} />
-          <Palette {...seedPalettes[1]} />
-          <Palette {...seedPalettes[2]} />
-          <Palette {...seedPalettes[3]} />
-          <Palette {...seedPalettes[6]} />
-          <Palette {...seedPalettes[5]} />
-          <Palette {...seedPalettes[7]} />
-          <Palette {...seedPalettes[8]} />
-          <Palette {...seedPalettes[9]} />
-          <Palette {...seedPalettes[10]} />
-          <Palette {...seedPalettes[11]} />
+          {data && data.map((palette) => (
+            <Palette key={palette.palette_id} {...palette} />
+          ))}
         </div>
       </main>
       <Toaster

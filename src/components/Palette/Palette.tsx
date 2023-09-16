@@ -4,14 +4,14 @@ import React from "react";
 import styles from "./palette.module.scss";
 import ColorBox from "../ColorBox/ColorBox";
 
-interface paletteProps {
-    paletteName: string;
-    id: string;
-    emoji: string;
-    colors: any[];
-}
+// interface paletteProps {
+//     paletteName: string;
+//     id: string;
+//     emoji: string;
+//     colors: any[];
+// }
 
-const Palette = ({ colors }: paletteProps) => {
+const Palette = ({ colors }: any) => {
 
   return (
     <div className={styles.palette}>
