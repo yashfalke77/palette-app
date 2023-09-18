@@ -3,9 +3,7 @@ import styles from './loading.module.scss';
 
 const Loading = () => {
   return (
-    <div className={styles.loading}>
-      <div className={`${styles.spinner} ${styles["spinner--1"]}`}></div>
-    </div>
+    <div className={`${styles.spinner} ${styles["spinner--1"]}`}></div>
   );
 };
 

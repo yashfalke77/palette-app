@@ -1,0 +1,13 @@
+.palettes {
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+        grid-gap: 20px 35px;
+        padding: 4rem;
+    }
+}
+
+.loading {
+    @apply flex justify-center;;
+}
