@@ -1,6 +1,6 @@
 import Loading from '@/components/loading/Loading';
 import React from 'react';
-import styles from './palettes.module.scss';
+import styles from './palettes/palettes.module.scss';
 
 const loading = () => {
   return (

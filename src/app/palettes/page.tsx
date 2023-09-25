@@ -5,6 +5,7 @@ import styles from './palettes.module.scss';
 import { Toaster } from 'react-hot-toast';
 import fetchPalettes from '@/actions/fetchPalettes';
 import PaletteList from '@/components/PalettesList/PaletteList';
+import ErrorDisplay from '@/components/ErrorDisplay/ErrorDisplay';
 
 
 export const revalidate = 60;
@@ -25,7 +26,7 @@ const page = async () => {
               Get inspired by thousands of beautiful color schemes and make something cool!
           </p>
         </div>
-        {error ? <p>{error.message}</p> :
+        {error ? <ErrorDisplay message={error.message} /> :
           <div>
             <PaletteList initialPalettes={data!} totalResults={count!} />
           </div>

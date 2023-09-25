@@ -3,9 +3,10 @@
 import React from "react";
 import styles from "./palette.module.scss";
 import ColorBox from "../ColorBox/ColorBox";
+import Link from "next/link";
 
 
-const Palette = ({ colors }: any) => {
+const Palette = ({ colors, palette_id }: any) => {
 
   return (
     <div className={styles.palette}>
@@ -17,9 +18,10 @@ const Palette = ({ colors }: any) => {
       <div className={styles.palette__description}>
         <div className={styles.palette__like}>
           <svg className={styles.palette__iconHeart}>
-            <use href='/icons/symbol-defs.svg#icon-heart-outlined'></use>
+            <use href='/icons/symbol-defs.svg#icon-favorite_outline'></use>
           </svg>
           <span className={styles.palette__text}>62.7k</span>
+          <Link href={`/palette/${palette_id}`} className={styles.palette__text} style={{marginLeft: '1rem'}}>view</Link>
         </div>
       </div>
     </div>

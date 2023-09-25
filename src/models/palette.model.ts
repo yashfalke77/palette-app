@@ -1,12 +1,12 @@
-import { Database } from "./supabase";
+import { Color } from "./color.model";
 
-export interface Palette {
-    created_at: string
-    description: string | null
-    emoji: string | null
-    is_enabled: boolean
-    name: string
-    palette_id: string
-    user_id: string
-    colors: Database["public"]["Tables"]["colors"]["Row"][];
+export interface PaletteModel {
+  created_at: string;
+  description: string | null;
+  emoji: string | null;
+  is_enabled: boolean;
+  name: string;
+  palette_id: string;
+  user_id: string;
+  colors: Color[];
 }

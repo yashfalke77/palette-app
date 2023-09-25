@@ -1,28 +1,15 @@
+import { PaletteModel } from "@/models/palette.model";
 import chroma from "chroma-js";
 
-interface Color {
-    name: string;
-    hex: string;
-    rgb: string;
-    rgba: string;
-    hsla: string;
-    lab: string;
-    num: string;
-    cmyk: string;
-}
-interface paletteProps {
-    paletteName: string;
-    id: string;
-    emoji: string;
-    colors: Array<Color>;
-}
-
-
-function generateDifferentUnit(starterPalette:paletteProps){
-  const newPalette:paletteProps = {
-    paletteName: starterPalette.paletteName,
-    id: starterPalette.id,
+function generateDifferentUnit(starterPalette:PaletteModel){
+  const newPalette:PaletteModel = {
+    name: starterPalette.name,
+    palette_id: starterPalette.palette_id,
     emoji: starterPalette.emoji,
+    created_at: starterPalette.created_at,
+    description: starterPalette.description,
+    user_id: starterPalette.user_id,
+    is_enabled: starterPalette.is_enabled,
     colors: []
   };
 
@@ -31,6 +18,9 @@ function generateDifferentUnit(starterPalette:paletteProps){
     const lab = chroma(color.hex).lab().map(ele => ((Math.round(ele * 100) / 100).toFixed(2)));
     const cmyk = chroma(color.hex).cmyk().map(ele => ((Math.round(ele * 100) / 100).toFixed(2)));
     newPalette.colors.push({
+      color_id: color.color_id,
+      created_at: color.created_at,
+      palette_id: color.palette_id,
       name: color.name,
       hex: color.hex,
       rgb: String(chroma(color.hex).rgb()),

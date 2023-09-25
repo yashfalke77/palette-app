@@ -1,0 +1,186 @@
+.view {
+    @apply py-[10rem] px-[4.2rem];
+
+    &__head {
+        @apply flex justify-between items-center mb-[10rem];
+
+        &Right {
+            @apply flex items-center;
+        }
+    }
+
+    &__headingPrimary {
+        @apply font-black text-[4.8rem] leading-[1.1em] tracking-tighter mb-[1rem];
+    }
+
+    &__unitDropdown {
+        @apply relative text-[1.6rem] cursor-pointer bg-white py-[1rem] px-[1.2rem] rounded-2xl transition-all duration-75 ease-in-out mr-[4rem];
+
+        &Button {
+            @apply flex items-center font-medium uppercase;
+        }
+
+        &:hover,
+        &:focus {
+            @apply bg-[#f2f2f3];
+        }
+
+        &Text {
+            @apply mr-[0.6rem];
+        }
+    }
+
+    &__iconArrow,
+    &__iconHeart {
+        @apply w-[1.8rem] fill-black h-[1.8rem] ml-[0.6rem];
+    }
+
+    &__iconHeart {
+        @apply w-[2.2rem] h-[2.2rem];
+    }
+
+    &__options {
+        @apply absolute top-[5.4rem] right-[-0.8rem] w-[15rem] z-20 p-[0.8rem] bg-white rounded-[10px];
+        box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px, rgba(0, 0, 0, 0.12) 0 15px 30px 0px;
+
+        &::after {
+            top: -6px;
+            background: #ffff;
+        }
+
+        &::after {
+            border-bottom: 1px solid rgb(223, 212, 212);
+            border-right: 1px solid rgb(223, 212, 212);
+            border-radius: 0 0 4px 0;
+            margin-left: -5px;
+            right: 2rem;
+            transform: rotate(-135deg);
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+        }
+    }
+
+    &__link {
+
+        @apply font-medium leading-[1.7] py-[0.6rem] px-[1.6rem] w-full text-[1.4rem] transition-all duration-75 ease-in-out text-start rounded-[10px];
+
+        &:hover {
+            @apply bg-[#f2f2f3];
+        }
+    }
+
+    &__likes {
+        @apply flex relative;;
+    }
+
+    &__button1,
+    &__button2 {
+        @apply bg-white outline-none flex justify-center items-center cursor-pointer h-[4.6rem] min-w-[4.6rem] transition-all duration-75 ease-in-out font-medium text-[1.4rem] leading-[1.7];
+        
+        &:hover {
+            border: 1px solid #b1b0b5;
+        }
+    }
+
+    &__button1 {
+        margin-left: -10px;
+        border: 1px solid #d8d8da;
+        border-radius: 10px 0px 0px 10px;
+        @apply px-[1.6rem];
+    }
+
+    &__button2 {
+        border: 1px solid #d8d8da;
+        border-left: 1px solid transparent;
+        border-radius: 0px 10px 10px 0px;
+        @apply px-[0.8rem];
+    }
+
+    &__text {
+        @apply ml-[0.6rem];
+    }
+
+    &__options1 {
+        @apply absolute top-[6rem] right-[0rem] w-[22rem] z-20 p-[0.8rem] bg-white rounded-[10px];
+        box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px, rgba(0, 0, 0, 0.12) 0 15px 30px 0px;
+
+        &::after {
+            top: -6px;
+            background: #ffff;
+        }
+
+        &::after {
+            border-bottom: 1px solid rgb(223, 212, 212);
+            border-right: 1px solid rgb(223, 212, 212);
+            border-radius: 0 0 4px 0;
+            margin-left: -5px;
+            right: 2rem;
+            transform: rotate(-135deg);
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+        }
+
+        &Icon1 {
+            @apply w-[1.8rem] h-[1.8rem] fill-black mr-[1.4rem];
+        }
+
+    }
+
+    &__divider {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.075);
+        @apply block relative h-[1px] mt-[0.8rem] mb-[0.8rem] ml-[0.5rem];
+    }
+
+    &__item1 {
+
+        @apply text-[1.4rem] font-medium px-[1.2rem] py-[0.8rem] rounded-[10px];
+
+        &:hover {
+            @apply bg-[#f2f2f3];
+        }
+    }
+
+    &__link1 {
+        @apply flex items-center;
+    }
+
+    &__body {
+        @apply flex flex-wrap w-full;
+        height: 40rem !important;
+        margin:  0 auto;
+    }
+
+    &__bottom {
+        @apply pt-[12rem];
+    }
+
+    &__headingSecondary {
+        @apply font-black text-[3.5rem] leading-[1.1em] tracking-tighter mb-[3rem] text-center;
+    }
+
+    &__allPalettes {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+        grid-gap: 20px 35px;
+        padding: 6rem 0rem;
+    }
+
+    &__morePalettes{
+        @apply flex justify-center;
+    }
+
+    &__outlineBtn {
+        @apply w-[30rem] text-center py-[1rem] px-[3rem] rounded-[10px] transition-all duration-75 ease-in-out font-medium;
+        box-shadow: inset #d8d8da 0 0 0 1px;
+
+        &:hover {
+            box-shadow: inset #b1b0b5 0 0 0 1px;
+        }
+    }
+
+}

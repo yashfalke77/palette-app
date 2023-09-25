@@ -1,0 +1,7 @@
+.error {
+    @apply flex flex-col justify-center items-center;
+
+    &__message {
+        @apply font-medium text-[1.4rem] text-gray-400;
+    }
+}
