@@ -2,7 +2,6 @@ import Navbar from '@/components/Navbar/Navbar';
 import Search from '@/components/Search/Search';
 import React from 'react';
 import styles from './palettes.module.scss';
-import { Toaster } from 'react-hot-toast';
 import fetchPalettes from '@/actions/fetchPalettes';
 import PaletteList from '@/components/PalettesList/PaletteList';
 import ErrorDisplay from '@/components/ErrorDisplay/ErrorDisplay';
@@ -32,18 +31,6 @@ const page = async () => {
           </div>
         }
       </main>
-      <Toaster
-        position='bottom-center'
-        reverseOrder={false}
-        toastOptions={{
-          success: {
-            iconTheme: {
-              primary: 'white',
-              secondary: 'black',
-            },
-          },
-        }}
-      />
     </div>
   );
 };

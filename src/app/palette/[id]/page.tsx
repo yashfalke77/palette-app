@@ -3,7 +3,6 @@ import paletteService from '@/services/palettes.service';
 import { redirect } from 'next/navigation';
 import React from 'react';
 import ViewPalette from './ViewPalette';
-import { Toaster } from 'react-hot-toast';
 import Footer from '@/components/footer/Footer';
 import ErrorDisplay from '@/components/ErrorDisplay/ErrorDisplay';
 
@@ -23,18 +22,6 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <ViewPalette palette={data} randomPalettes={randomPalettes.data} />
       )}
       <Footer />
-      <Toaster
-        position='bottom-center'
-        reverseOrder={false}
-        toastOptions={{
-          success: {
-            iconTheme: {
-              primary: 'white',
-              secondary: 'black',
-            },
-          },
-        }}
-      />
     </div>
   );
 };
