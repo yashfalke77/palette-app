@@ -59,6 +59,61 @@
     &__link {
         @apply inline-flex items-center h-24 font-medium text-base transition-all duration-75 ease-in-out hover:text-primary-200;
     }
+
+    &__profile {
+        @apply pl-8;
+    }
+
+    &__avatar {
+        @apply cursor-pointer;
+    }
+
+    &__options1 {
+        @apply absolute top-[5.8rem] right-[1.5rem] w-[12rem] z-20 p-[0.8rem] bg-white rounded-[10px];
+        box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 1px, rgba(0, 0, 0, 0.12) 0 15px 30px 0px;
+
+        &::after {
+            top: -6px;
+            background: #ffff;
+        }
+
+        &::after {
+            border-bottom: 1px solid rgb(223, 212, 212);
+            border-right: 1px solid rgb(223, 212, 212);
+            border-radius: 0 0 4px 0;
+            margin-left: -5px;
+            right: 2rem;
+            transform: rotate(-135deg);
+            content: '';
+            height: 12px;
+            width: 12px;
+            position: absolute;
+        }
+
+        &Icon1 {
+            @apply w-[1.8rem] h-[1.8rem] fill-black mr-[1.4rem];
+        }
+
+    }
+
+    &__divider1 {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.075);
+        @apply block relative h-[1px] mt-[0.8rem] mb-[0.8rem] ml-[0.5rem];
+    }
+
+    &__item1 {
+
+        @apply text-[1.4rem] font-medium px-[1.2rem] py-[0.8rem] rounded-[10px];
+
+        &:hover {
+            @apply bg-[#f2f2f3];
+        }
+    }
+
+    &__link1 {
+        @apply flex items-center;
+    }
 }
 
 .tools {

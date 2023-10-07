@@ -12,25 +12,32 @@ import logo from '../../../public/Images/logo.png';
 import { Session, createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
+import Avvvatars from 'avvvatars-react';
 
 const NavbarClient = ({session}: {session: Session | null}) => {
   const supabase = createClientComponentClient();
   const router = useRouter();
   const toolsRef: any = useRef(null);
+  const profileRef: any = useRef(null);
 
   // states
   const [toolOptions, setToolOptions] = useState(false);
+  const [profileOptions, setProfileOptions] = useState(false);
 
   useEffect(() => {
     document.addEventListener("click", (evt) => {
       if (toolsRef.current && !toolsRef.current.contains(evt.target)) {
         setToolOptions(false);
       }
+      if (profileRef.current && !profileRef.current.contains(evt.target)) {
+        setProfileOptions(false);
+      }
     });
   }, []);
 
   const logout = async () => {
     await supabase.auth.signOut();
+    setProfileOptions(false);
     toast.success('Logged out Successfully! ', {
       style: {
         borderRadius: '100px',
@@ -147,9 +154,38 @@ const NavbarClient = ({session}: {session: Session | null}) => {
         </div>)}
 
         {session !== null &&
-        (<div className={styles.nav__auth}>
-          <Link className={styles.nav__link} href='/profile'>Hi, {session?.user.user_metadata.name}</Link>
-          <button className={styles.nav__btnRound} onClick={logout}>Sign out</button>
+        (<div className={styles.nav__profile}>
+          <div className={styles.nav__avatar} onClick={() => (setProfileOptions(true))} ref={profileRef}>
+            <Avvvatars value={session?.user.user_metadata.email} size={40} displayValue={session?.user.user_metadata.name} style='character' border={true} />
+            {profileOptions && (
+              <div className={styles.nav__options1}>
+                <ul className={styles.nav__list1}>
+                  <li className={styles.nav__item1}>
+                    <Link href='/' className={styles.nav__link1}>
+                      <span className={styles.nav__optionsText1}>Dashboard</span>
+                    </Link>
+                  </li>
+                  <div className={styles.nav__divider1}></div>
+                  <div className={styles.nav__divider}></div>
+                  <li className={styles.nav__item1}>
+                    <Link href='/' className={styles.nav__link1}>
+                      <span className={styles.nav__optionsText1}>Profile</span>
+                    </Link>
+                  </li>
+                  <li className={styles.nav__item1}>
+                    <Link href='/' className={styles.nav__link1}>
+                      <span className={styles.nav__optionsText1}>Account</span>
+                    </Link>
+                  </li>
+                  <li className={styles.nav__item1}>
+                    <button className={styles.nav__link1} onClick={logout}>
+                      <span className={styles.nav__optionsText1}>Sign Out</span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         </div>)}
       </div>
     </nav>
