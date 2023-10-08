@@ -6,6 +6,7 @@ import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import toast from 'react-hot-toast';
 import { useRouter } from 'next/navigation';
 import LoadingLight from '@/components/loading/LoadingLight';
+import SocialGoogle from '@/components/auth/SocialGoogle/SocialGoogle';
 
 
 const Page = () => {
@@ -77,12 +78,7 @@ const Page = () => {
       <section className={styles.signIn__mainContainer}>
         <div className={styles.signIn__authContent}>
           <h2 className={styles.signIn__headingSecondary}>Sign in to Colors</h2>
-          <a href='/' className={styles.signIn__google}>
-            <svg className={styles.signIn__icon}>
-              <use href='/icons/symbol-defs.svg#icon-google'></use>
-            </svg>
-            <span className={styles.signIn__googleText}>Sign in with Google</span>
-          </a>
+          <SocialGoogle />
           <hr className={styles.signIn__divider} ></hr>
           <form className={styles.signIn__form} onSubmit={handleSubmit}>
             <div className={styles.signIn__field}>

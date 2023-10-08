@@ -1,0 +1,15 @@
+.google {
+    &__button {
+        @apply flex items-center justify-center w-full bg-white rounded-2xl py-[1.6rem] text-[1.6rem] transition-all duration-75 ease-in-out;
+        box-shadow: inset #d8d8da 0 0 0 1px;
+    
+        &:hover{
+            @apply bg-[#f7f7f8];
+            box-shadow: inset #b1b0b5 0 0 0 1px;
+        }
+    }
+    
+    &__icon {
+        @apply w-[1.6rem] h-[1.6rem] mr-[1rem] fill-black;
+    }
+}

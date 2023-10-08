@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './signUpOptions.module.scss';
 import Link from 'next/link';
+import SocialGoogle from '../SocialGoogle/SocialGoogle';
 
 interface SignUpOptionsProps {
   options: boolean;
@@ -11,12 +12,7 @@ const SignUpOptions = ({setOptions}: SignUpOptionsProps) => {
   return (
     <div className={styles.signUp__authContent}>
       <h2 className={styles.signUp__headingSecondary}>Sign up to Colors</h2>
-      <a href='/' className={styles.signUp__google}>
-        <svg className={styles.signUp__icon}>
-          <use href='/icons/symbol-defs.svg#icon-google'></use>
-        </svg>
-        <span className={styles.signUp__googleText}>Sign up with Google</span>
-      </a>
+      <SocialGoogle />
       <hr className={styles.signUp__divider} ></hr>
       <button className={styles.signUp__email} onClick={() => (setOptions(false))}>Continue with Email</button>
       <p className={styles.signUp__disclaimer}>
