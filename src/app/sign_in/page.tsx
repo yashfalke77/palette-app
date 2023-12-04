@@ -4,14 +4,14 @@ import styles from './signIn.module.scss';
 import Link from 'next/link';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import toast from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 import LoadingLight from '@/components/loading/LoadingLight';
 import SocialGoogle from '@/components/auth/SocialGoogle/SocialGoogle';
 
 
 const Page = () => {
   const supabase = createClientComponentClient();
-  const router = useRouter();
+  // const router = useRouter();
 
   const [formValues, setFormValues] = useState({
     email: '',
@@ -48,18 +48,20 @@ const Page = () => {
       });
     } else if (data?.user) {
       setLoading(false);
-      router.push('/');
-      toast.success('Logged In Successfully! ', {
-        style: {
-          borderRadius: '100px',
-          background: '#000',
-          paddingLeft: '16px',
-          paddingRight: '16px',
-          paddingTop: '10px',
-          paddingBottom: '10px',
-          color: '#fff',
-        },
-      });
+      window.location.replace('/');
+      // -- temp fix for state not changing on redirect to home, fix it when using any state management library.
+      // router.push('/');
+      // toast.success('Logged In Successfully! ', {
+      //   style: {
+      //     borderRadius: '100px',
+      //     background: '#000',
+      //     paddingLeft: '16px',
+      //     paddingRight: '16px',
+      //     paddingTop: '10px',
+      //     paddingBottom: '10px',
+      //     color: '#fff',
+      //   },
+      // });
     }
   };
 
