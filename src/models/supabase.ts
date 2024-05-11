@@ -1,3 +1,5 @@
+import { Color } from "./color.model";
+
 export type Json =
   | string
   | number
@@ -50,6 +52,7 @@ export interface Database {
           name: string
           palette_id: string
           user_id: string
+          colors: Color[]
         }
         Insert: {
           created_at?: string
