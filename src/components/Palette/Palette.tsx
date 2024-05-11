@@ -4,9 +4,10 @@ import React from "react";
 import styles from "./palette.module.scss";
 import ColorBox from "../ColorBox/ColorBox";
 import Link from "next/link";
+import { Color } from "@/models/color.model";
 
 
-const Palette = ({ colors, palette_id }: any) => {
+const Palette = ({ colors, palette_id }: {colors: Color[], palette_id: string}) => {
 
   return (
     <div className={styles.palette}>
